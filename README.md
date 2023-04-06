@@ -12,24 +12,17 @@ A fractal is created by repeating a specific process or formula over and over ag
 
 ### Mandelbrot
 In the Mandelbrot fractal, you start with a complex number and then perform a calculation on that number. If the result is within a certain range, you color that point black. If it is outside the range, you color it a different color based on how quickly the result grew beyond the range. You then repeat this process for every point on a grid covering the complex plane.
-
   
 
 `z[n+1] = z[n]^2 + c`
-
-  
 
 where z[0] is set to 0.
 
   
 
 For each pixel in the complex plane, the corresponding value of c is calculated as
-
-  
-
+ 
 `c = x + yi`
-
-  
 
 where x is the real component and y is the imaginary component of the pixel's position in the plane.
 
@@ -37,13 +30,9 @@ where x is the real component and y is the imaginary component of the pixel's po
 
 The values of x and yi are calculated based on the pixel coordinates of the image being generated and the minimum and maximum values of the real and imaginary axes of the complex plane.
 
-  
-
 `x = min_r + x * (max_r - min_r) / (image_width - 1)`
 
 `yi = min_i + y * (max_i - min_i) / (image_height - 1)`
-
-  
 
 min_r and max_r are the minimum and maximum values of the real axis, min_i and max_i are the minimum and maximum values of the imaginary axis, image_width and image_height are the width and height of the image, and x and i are the pixel coordinates of the image.
 
