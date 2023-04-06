@@ -15,7 +15,7 @@ In the Mandelbrot fractal, you start with a complex number and then perform a ca
 
   
 
-	`z[n+1] = z[n]^2 + c`
+`z[n+1] = z[n]^2 + c`
 
   
 
@@ -27,7 +27,7 @@ For each pixel in the complex plane, the corresponding value of c is calculated 
 
   
 
-	`c = x + yi`
+`c = x + yi`
 
   
 
@@ -39,9 +39,9 @@ The values of x and yi are calculated based on the pixel coordinates of the imag
 
   
 
-	`x = min_r + x * (max_r - min_r) / (image_width - 1)`
+`x = min_r + x * (max_r - min_r) / (image_width - 1)`
 
-	`yi = min_i + y * (max_i - min_i) / (image_height - 1)`
+`yi = min_i + y * (max_i - min_i) / (image_height - 1)`
 
   
 
@@ -68,7 +68,7 @@ This file holds the core of the program. It contains functions that calculate th
 This function implements the Mandelbrot set fractal. It takes two arguments, pr and pi, which represent the real and imaginary parts of the starting point of the iteration (in this case, both are set to 0). The function then performs a series of calculations on this point to determine whether it is part of the Mandelbrot set or not. 
 The formula used for this iteration is:
 
-	`z = z^2 + c`
+`z = z^2 + c`
 
 where z and c are both complex numbers. In this case, c is set to the value of pr + pi*i. As with the Julia set, the function continues iterating until z exceeds the threshold value or until it reaches the maximum number of iterations allowed. If z exceeds the threshold value, the function determines that the point is not part of the Mandelbrot set and returns false. Otherwise, it returns true.
 * ft_julia
